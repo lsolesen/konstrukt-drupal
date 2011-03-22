@@ -24,6 +24,5 @@ function konstrukt_show_view()
  
     ob_start();
     k()->setContext(new k_HttpRequest($href_base, $request_uri, null, new MyLanguageLoader(), new SimpleTranslatorLoader()))->run('Root')->out();
-    ob_end_flush();
     return ob_get_contents();
 }
